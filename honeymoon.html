@@ -17,10 +17,44 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
+    /* Improve mobile menu button visibility and usability */
+    @media (max-width: 991.98px) {
+        .mobile_menu {
+            min-height: 48px;
+            min-width: 48px;
+            display: flex !important;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 8px 16px;
+            background: #9CAF88;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 1001;
+        }
+        .slicknav_menu, .slicknav_btn {
+            min-height: 48px !important;
+            min-width: 48px !important;
+            font-size: 2em !important;
+        }
+        .slicknav_icon-bar {
+            background: #fff !important;
+            height: 5px !important;
+            margin: 6px 0 !important;
+            border-radius: 2px;
+        }
+        .slicknav_menu {
+            background: #9CAF88 !important;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+    }
+    </style>
+    <style>
     /* Fix sticky header overlap on mobile */
     @media (max-width: 991.98px) {
         body {
-            margin-top: 70px; /* Adjust this value to match your header height on mobile */
+            margin-top: 200px; /* Adjust this value to match your header height on mobile */
         }
     }
     </style>
