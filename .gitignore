@@ -1,0 +1,26 @@
+# Environment variables with sensitive data
+.env
+.env.local
+.env.*.local
+
+# Logs directory
+logs/
+
+# IDE and OS files
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/

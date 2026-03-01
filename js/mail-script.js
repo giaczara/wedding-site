@@ -1,7 +1,7 @@
     // -------   Mail Send ajax
 
      $(document).ready(function() {
-        var form = $('#myForm'); // contact form
+        var form = $('#myForm'); // RSVP form
         var submit = $('.submit-btn'); // submit button
         var alert = $('.alert-msg'); // alert div for show alert message
 
@@ -12,15 +12,19 @@
             $.ajax({
                 url: 'mail.php', // form action url
                 type: 'POST', // form submit method get/post
-                dataType: 'html', // request type html/json/xml
+                dataType: 'json', // request type html/json/xml
                 data: form.serialize(), // serialize form data
                 beforeSend: function() {
                     alert.fadeOut();
-                    submit.html('Sending....'); // change submit button text
+                    submit.html('Invio in corso....'); // change submit button text
                 },
                 success: function(data) {
-                    alert.html(data).fadeIn(); // fade in response data
-                    form.trigger('reset'); // reset form
+                    if (data.success) {
+                        alert.html('<div class="alert alert-success">' + data.message + '</div>').fadeIn();
+                        form.trigger('reset'); // reset form
+                    } else {
+                        alert.html('<div class="alert alert-danger">' + data.message + '</div>').fadeIn();
+                    }
                     submit.html('R.S.V.P'); // reset submit button text
                 },
                 error: function(e) {
