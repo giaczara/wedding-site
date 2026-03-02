@@ -319,6 +319,7 @@
                                                     <option value="4">4 Ospiti</option>
                                                 </select>
                                             </div>
+                                            <div id="additional-guests-container"></div>
                                             <div class="col-xl-12">
                                                 <textarea name="message" placeholder="Note, intolleranze alimentari, allergie e altro"></textarea>
                                             </div>
@@ -442,6 +443,23 @@
             type: 'image',
             gallery: {
                 enabled: true
+            }
+        });
+    </script>
+
+    <!-- Dynamic Additional Guests Input -->
+    <script>
+        document.getElementById('default-select').addEventListener('change', function() {
+            const guestCount = parseInt(this.value);
+            const container = document.getElementById('additional-guests-container');
+            container.innerHTML = ''; // Clear previous inputs
+
+            // Generate inputs for additional guests (guest count - 1)
+            for (let i = 2; i <= guestCount; i++) {
+                const colDiv = document.createElement('div');
+                colDiv.className = 'col-xl-12';
+                colDiv.innerHTML = '<input type="text" name="guest_' + i + '_name" placeholder="Nome e Cognome ospite ' + i + '">';
+                container.appendChild(colDiv);
             }
         });
     </script>
