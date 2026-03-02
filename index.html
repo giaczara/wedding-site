@@ -449,20 +449,27 @@
 
     <!-- Dynamic Additional Guests Input -->
     <script>
-        document.getElementById('default-select').addEventListener('change', function() {
-            const guestCount = parseInt(this.value);
+    $(document).ready(function() {
+        // Use jQuery to listen for the change event triggered by nice-select
+        $('#default-select').on('change', function() {
+            const guestCount = parseInt($(this).val());
             const container = document.getElementById('additional-guests-container');
-            container.innerHTML = ''; // Clear previous inputs
+            
+            // Clear previous inputs
+            container.innerHTML = ''; 
 
-            // Generate inputs for additional guests (guest count - 1)
+            // Generate inputs for additional guests
             for (let i = 2; i <= guestCount; i++) {
                 const colDiv = document.createElement('div');
                 colDiv.className = 'col-xl-12';
-                colDiv.innerHTML = '<input type="text" name="guest_' + i + '_name" placeholder="Nome e Cognome ospite ' + i + '">';
+                // Note: added a margin-top style to match the layout spacing
+                colDiv.style.marginTop = "10px"; 
+                colDiv.innerHTML = '<input type="text" name="guest_' + i + '_name" placeholder="Nome e Cognome ospite ' + i + '" required>';
                 container.appendChild(colDiv);
             }
         });
-    </script>
+    });
+</script>
 
 </body>
 
