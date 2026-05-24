@@ -325,6 +325,7 @@
                                         <div id="rsvp-thankyou" style="display:none; text-align:center; padding: 20px 0;">
                                             <p style="font-size:1.2em; color:#9CAF88; font-weight:600;">Grazie! La tua risposta è stata inviata. 💐</p>
                                             <p>Non vediamo l'ora di festeggiare con voi!</p>
+                                            <a href="index.html" class="boxed_btn3" style="display:inline-block; margin-top:16px;">Torna alla home</a>
                                         </div>
 
                                     </div>
@@ -441,7 +442,7 @@
             { value: 'senza_glutine',  label: 'Senza Glutine' },
             { value: 'vegetariano',    label: 'Vegetariano' },
             { value: 'senza_lattosio', label: 'Senza Lattosio' },
-            { value: 'vegano',           label: 'Vegano' }
+            { value: 'vegano',         label: 'Vegano' }
         ];
 
         // Build a card; optionally pre-fill from a saved response object
@@ -450,17 +451,22 @@
             var fullName = member.first_name + ' ' + member.last_name;
             var nameField = '<input type="hidden" name="' + slug + '_name" value="' + fullName + '">';
 
+            // Determine saved attendance, default to 'in_attesa'
+            var savedAttendance = (saved && saved.attendance) ? saved.attendance : 'in_attesa';
+
             var attendance =
                 '<div class="rsvp-section-label">Partecipazione</div>' +
                 '<div class="rsvp-member-attendance">' +
-                  '<label class="rsvp-radio-label"><input type="radio" name="' + slug + '_attendance" value="accetto" required' +
-                    (saved && saved.attendance === 'accetto' ? ' checked' : '') + '> Accetto</label>' +
+                  '<label class="rsvp-radio-label"><input type="radio" name="' + slug + '_attendance" value="accetto"' +
+                    (savedAttendance === 'accetto' ? ' checked' : '') + '> Accetto</label>' +
                   '<label class="rsvp-radio-label"><input type="radio" name="' + slug + '_attendance" value="non_accetto"' +
-                    (saved && saved.attendance === 'non_accetto' ? ' checked' : '') + '> Non accetto</label>' +
+                    (savedAttendance === 'non_accetto' ? ' checked' : '') + '> Non accetto</label>' +
+                  '<label class="rsvp-radio-label"><input type="radio" name="' + slug + '_attendance" value="in_attesa"' +
+                    (savedAttendance === 'in_attesa' ? ' checked' : '') + '> In attesa</label>' +
                 '</div>';
 
-            // Menu block — visible if previously accepted
-            var menuVisible = saved && saved.attendance === 'accetto';
+            // Menu block — visible only if previously accepted
+            var menuVisible = savedAttendance === 'accetto';
             var menuHtml = '<div class="rsvp-menu-block' + (menuVisible ? ' visible' : '') + '" id="menu-block-' + slug + '"><div class="rsvp-section-label">Menu</div><div class="rsvp-member-menu">';
             menuOptions.forEach(function(opt) {
                 var checked = saved && saved.menu && saved.menu.indexOf(opt.value) !== -1 ? ' checked' : '';
@@ -481,7 +487,6 @@
             for (var i = 1; i <= totalMembers; i++) {
                 var slug       = 'member_' + i;
                 var attendance = document.querySelector('input[name="' + slug + '_attendance"]:checked');
-                // Every member must have an attendance choice
                 if (!attendance) { setSubmitEnabled(false); return; }
                 // If accetto, at least one menu option must be ticked
                 if (attendance.value === 'accetto') {
@@ -521,7 +526,8 @@
                     });
                 });
             });
-            // Run once after render in case pre-filled data already satisfies conditions
+            // Enable button as soon as form is fully rendered —
+            // "In attesa" is pre-selected so the form is always in a submittable state
             checkFormValid();
         }
 
