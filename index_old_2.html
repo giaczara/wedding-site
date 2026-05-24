@@ -136,7 +136,6 @@
                                     <ul id="navigation">
                                         <li><a class="active" href="index.html">home</a></li>
                                         <li><a href="honeymoon.html">La nostra Luna di Miele</a></li>
-                                        <li><a href="rsvp.html">R.S.V.P.</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -283,7 +282,62 @@
     </div>
     <!--/ timeline_area -->
 
-    <!-- attend_area removed — RSVP is now at rsvp.html -->
+    <!-- attend_area -->
+    <div class="attending_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
+                    <div class="main_attending_area">
+                        <div class="flower_1 d-none d-lg-block">
+                            <img src="img/appointment/flower-top.png" alt="">
+                        </div>
+                        <div class="flower_2 d-none d-lg-block">
+                            <img src="img/appointment/flower-bottom.png" alt="">
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-7 col-lg-8">
+                                <div class="popup_box ">
+                                    <div class="popup_inner">
+                                        <div class="form_heading text-center">
+                                            <h3>Ci sarai?</h3>
+                                            <p>Ti chiediamo di farci sapere entro il 31 luglio!</p>
+                                        </div>
+                                        <div class="alert-msg"></div>
+                                        <form action="https://formspree.io/f/mzdaqjzg" method="POST" id="myForm">
+                                        <div class="row">
+                                            <div class="col-xl-12">
+                                                <input type="text" name="name" placeholder="Nome e Cognome" required>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <input type="email" name="email" placeholder="Email" required>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <select class="form-select wide" id="default-select" name="guests">
+                                                    <option value="1">1 Ospite</option>
+                                                    <option value="2">2 Ospiti</option>
+                                                    <option value="3">3 Ospiti</option>
+                                                    <option value="4">4 Ospiti</option>
+                                                </select>
+                                            </div>
+                                            <div id="additional-guests-container"></div>
+                                            <div class="col-xl-12">
+                                                <textarea name="message" placeholder="Note, intolleranze alimentari, allergie e altro"></textarea>
+                                            </div>
+                                            <div class="col-xl-12">
+                                                <button type="submit" class="boxed_btn3 submit-btn">R.S.V.P</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / attend_area -->
 
 <!-- ================ contact section start ================= -->
 <div style="margin-top: 25px; margin-bottom: 40px;">
@@ -323,7 +377,6 @@
                                 <ul>
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="honeymoon.html">La nostra Luna di Miele</a></li>
-                                    <li><a href="rsvp.html">R.S.V.P.</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -393,6 +446,30 @@
             }
         });
     </script>
+
+    <!-- Dynamic Additional Guests Input -->
+    <script>
+    $(document).ready(function() {
+        // Use jQuery to listen for the change event triggered by nice-select
+        $('#default-select').on('change', function() {
+            const guestCount = parseInt($(this).val());
+            const container = document.getElementById('additional-guests-container');
+            
+            // Clear previous inputs
+            container.innerHTML = ''; 
+
+            // Generate inputs for additional guests
+            for (let i = 2; i <= guestCount; i++) {
+                const colDiv = document.createElement('div');
+                colDiv.className = 'col-xl-12';
+                // Note: added a margin-top style to match the layout spacing
+                colDiv.style.marginTop = "10px"; 
+                colDiv.innerHTML = '<input type="text" name="guest_' + i + '_name" placeholder="Nome e Cognome ospite ' + i + '" required>';
+                container.appendChild(colDiv);
+            }
+        });
+    });
+</script>
 
 </body>
 

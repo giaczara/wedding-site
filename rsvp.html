@@ -1,0 +1,668 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>R.S.V.P. — Matrimonio Ema & Giacomo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ---- Mobile Menu ---- */
+        @media (max-width: 991px) {
+            .slicknav_menu { background: transparent !important; padding: 0 !important; margin: 15px 0 !important; }
+            .slicknav_btn { background-color: #9CAF88 !important; padding: 12px 15px !important; margin: 0 !important; border-radius: 8px !important; box-shadow: 0 2px 8px rgba(0,0,0,0.15) !important; position: relative !important; cursor: pointer !important; }
+            .slicknav_icon-bar { background-color: #fff !important; height: 3px !important; border-radius: 2px !important; display: block !important; width: 25px !important; margin: 5px 0 !important; }
+            .slicknav_nav { background: #fff !important; margin-top: 10px !important; border-radius: 8px !important; box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important; padding: 10px 0 !important; }
+            .slicknav_nav a { padding: 12px 20px !important; margin: 2px 0 !important; font-size: 16px !important; color: #333 !important; text-transform: capitalize !important; }
+            .slicknav_nav a:hover { background: #f5f5f5 !important; color: #9CAF88 !important; }
+            .slicknav_nav .slicknav_arrow { float: right !important; color: #9CAF88 !important; }
+            .header-area { background: #fff !important; box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important; }
+            .mobile_menu { display: block !important; text-align: right !important; padding: 10px 15px !important; }
+        }
+
+        /* ---- RSVP page hero ---- */
+        .rsvp-hero {
+            background: #f9f7f4;
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 1px solid #ece6dc;
+        }
+        .rsvp-hero img { max-width: 120px; margin-bottom: 12px; }
+        .rsvp-hero h2 {
+            font-size: 2.4rem;
+            color: #9CAF88;
+            margin-bottom: 6px;
+        }
+        .rsvp-hero p {
+            font-size: 1.05rem;
+            color: #777;
+            margin: 0;
+        }
+
+        /* ---- RSVP Guest Lookup & Cards ---- */
+        #rsvp-lookup,
+        #rsvp-form-area,
+        #rsvp-thankyou {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .rsvp-member-card {
+            background: #f9f7f4;
+            border: 1px solid #e0d8cc;
+            border-radius: 10px;
+            padding: 18px 20px 14px;
+            margin-bottom: 16px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .rsvp-member-name {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #9CAF88;
+            margin-bottom: 14px;
+            letter-spacing: 0.01em;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .rsvp-section-label {
+            font-size: 0.78em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #888;
+            margin-bottom: 8px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .rsvp-member-attendance {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .rsvp-radio-label {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 7px !important;
+            font-size: 0.95em !important;
+            font-weight: 500 !important;
+            cursor: pointer !important;
+            line-height: 1 !important;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+        }
+        .rsvp-radio-label input[type="radio"] {
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+            width: 16px !important; height: 16px !important;
+            min-width: 16px !important; min-height: 16px !important;
+            max-width: 16px !important; max-height: 16px !important;
+            border: 2px solid #9CAF88 !important;
+            border-radius: 50% !important;
+            background: #fff !important;
+            cursor: pointer !important;
+            margin: 0 !important; padding: 0 !important;
+            flex-shrink: 0 !important;
+            box-sizing: border-box !important;
+            vertical-align: middle !important;
+            display: inline-block !important;
+            position: relative !important;
+        }
+        .rsvp-radio-label input[type="radio"]:checked {
+            background: #9CAF88 !important;
+            box-shadow: inset 0 0 0 3px #fff !important;
+        }
+        .rsvp-member-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            margin-bottom: 4px;
+            align-items: center;
+        }
+        .rsvp-check-label {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 7px !important;
+            font-size: 0.95em !important;
+            cursor: pointer !important;
+            line-height: 1 !important;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+        }
+        .rsvp-check-label input[type="checkbox"] {
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+            width: 16px !important; height: 16px !important;
+            min-width: 16px !important; min-height: 16px !important;
+            max-width: 16px !important; max-height: 16px !important;
+            border: 2px solid #9CAF88 !important;
+            border-radius: 3px !important;
+            background: #fff !important;
+            cursor: pointer !important;
+            margin: 0 !important; padding: 0 !important;
+            flex-shrink: 0 !important;
+            box-sizing: border-box !important;
+            vertical-align: middle !important;
+            display: inline-block !important;
+            position: relative !important;
+        }
+        .rsvp-check-label input[type="checkbox"]:checked {
+            background: #9CAF88 !important;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.5 3.5L6 11 2.5 7.5' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: 11px !important;
+            border-color: #9CAF88 !important;
+        }
+        #rsvp-found-msg {
+            font-size: 1em;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        #rsvp-results {
+            margin-top: 14px;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .rsvp-results-label {
+            font-size: 0.82em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: #888;
+            margin-bottom: 8px;
+        }
+        .rsvp-result-btn {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: #fff;
+            border: 1px solid #d5cfc6;
+            border-radius: 7px;
+            padding: 10px 14px;
+            margin-bottom: 7px;
+            font-size: 0.97em;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #333;
+            cursor: pointer;
+            transition: border-color 0.15s, background 0.15s;
+        }
+        .rsvp-result-btn:hover {
+            border-color: #9CAF88;
+            background: #f4f7f1;
+            color: #5a7a47;
+        }
+        .rsvp-menu-block {
+            display: none;
+        }
+        .rsvp-menu-block.visible {
+            display: block;
+        }
+        .rsvp-menu-error {
+            font-size: 0.85em;
+            color: #c0392b;
+            margin-top: 6px;
+            display: none;
+        }
+        .rsvp-member-card.menu-invalid .rsvp-menu-error {
+            display: block;
+        }
+        .rsvp-member-card.menu-invalid {
+            border-color: #c0392b;
+        }
+        @media (max-width: 480px) {
+            .rsvp-member-card { padding: 14px 12px 10px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <div class="header-area">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo-img"></div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="main-menu d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index.html">home</a></li>
+                                        <li><a href="honeymoon.html">La nostra Luna di Miele</a></li>
+                                        <li><a class="active" href="rsvp.html">R.S.V.P.</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <!-- RSVP hero -->
+    <div class="rsvp-hero">
+        <img src="img/banner/flowers.png" alt="">
+        <h2>Ci sarai?</h2>
+        <p>Ti chiediamo di farci sapere entro il 31 luglio!</p>
+    </div>
+
+    <!-- RSVP form area -->
+    <div class="attending_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-10 offset-xl-1 col-lg-10 offset-lg-1">
+                    <div class="main_attending_area">
+                        <div class="flower_1 d-none d-lg-block">
+                            <img src="img/appointment/flower-top.png" alt="">
+                        </div>
+                        <div class="flower_2 d-none d-lg-block">
+                            <img src="img/appointment/flower-bottom.png" alt="">
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-7 col-lg-8">
+                                <div class="popup_box">
+                                    <div class="popup_inner">
+
+                                        <!-- Step 1: Name lookup -->
+                                        <div id="rsvp-lookup">
+                                            <div class="row">
+                                                <div class="col-xl-6 col-6" style="padding-right:6px;">
+                                                    <input type="text" id="lookup-first" placeholder="Nome" autocomplete="given-name">
+                                                </div>
+                                                <div class="col-xl-6 col-6" style="padding-left:6px;">
+                                                    <input type="text" id="lookup-last" placeholder="Cognome" autocomplete="family-name">
+                                                </div>
+                                            </div>
+                                            <div class="row" style="margin-top:10px;">
+                                                <div class="col-xl-12">
+                                                    <button type="button" class="boxed_btn3" id="lookup-btn" style="width:100%;">Cerca</button>
+                                                </div>
+                                            </div>
+                                            <div id="lookup-error" style="display:none; color:#c0392b; margin-top:12px; text-align:center; font-size:0.97em;">
+                                                Nome non trovato. Controlla il nome inserito o contattaci direttamente.
+                                            </div>
+                                            <div id="rsvp-results" style="display:none;"></div>
+                                        </div>
+
+                                        <!-- Step 2: RSVP form (shown after lookup) -->
+                                        <div id="rsvp-form-area" style="display:none;">
+                                            <div id="rsvp-found-msg" style="text-align:center; margin-bottom:18px; color:#9CAF88; font-weight:600;"></div>
+                                            <form action="https://formspree.io/f/mzdaqjzg" method="POST" id="myForm">
+                                                <input type="hidden" name="_subject" value="Nuova conferma partecipazione">
+                                                <div id="rsvp-members-container"></div>
+                                                <div class="col-xl-12" style="margin-top:18px;">
+                                                    <button type="submit" class="boxed_btn3 submit-btn" style="width:100%;">Invia R.S.V.P</button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <!-- Step 3: Thank you -->
+                                        <div id="rsvp-thankyou" style="display:none; text-align:center; padding: 20px 0;">
+                                            <p style="font-size:1.2em; color:#9CAF88; font-weight:600;">Grazie! La tua risposta è stata inviata. 💐</p>
+                                            <p>Non vediamo l'ora di festeggiare con voi!</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="quick_links">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="honeymoon.html">La nostra Luna di Miele</a></li>
+                                <li><a href="rsvp.html">R.S.V.P.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p class="copy_right text-center">
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved.<br>
+                            Grazie al template originale <a href="https://themewagon.com/themes/free-bootstrap-4-html5-responsive-wedding-website-template-sunshine/" target="_blank" rel="noopener">Sunshine by Themewagon</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- / footer -->
+
+    <!-- JS -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- RSVP Guest Lookup & Form -->
+    <script>
+    (function() {
+        // ---- REPLACE THIS with your Apps Script Web App URL after deploying ----
+        var SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxdRex53rqd3u-fkiv2quxd1QU8y8Yaw8SMuWL_X-VIzBALbzODNuvYoHLsh0hQtMjtoQ/exec';
+        // -------------------------------------------------------------------------
+
+        var guestsData   = null;
+        var currentGroup = null; // group currently shown in the form
+
+        function loadGuests(callback) {
+            if (guestsData) { callback(guestsData); return; }
+            fetch('guests.json')
+                .then(function(r) { return r.json(); })
+                .then(function(data) { guestsData = data; callback(data); })
+                .catch(function() { callback(null); });
+        }
+
+        function normalize(str) {
+            return (str || '').trim().toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+        function findMatches(data, query) {
+            var tokens = normalize(query).split(/\s+/).filter(Boolean);
+            if (!tokens.length) return [];
+            var seenGroups = {};
+            var results = [];
+            for (var i = 0; i < data.length; i++) {
+                var group = data[i];
+                for (var j = 0; j < group.members.length; j++) {
+                    var m = group.members[j];
+                    var nFirst = normalize(m.first_name);
+                    var nLast  = normalize(m.last_name);
+                    var allMatch = tokens.every(function(t) {
+                        return nFirst.indexOf(t) === 0 || nLast.indexOf(t) === 0;
+                    });
+                    if (allMatch && !seenGroups[group.group_id]) {
+                        seenGroups[group.group_id] = true;
+                        results.push({ group: group, member: m });
+                    }
+                }
+            }
+            return results;
+        }
+
+        var menuOptions = [
+            { value: 'adulto',         label: 'Adulto' },
+            { value: 'bambino',        label: 'Bambino' },
+            { value: 'senza_glutine',  label: 'Senza Glutine' },
+            { value: 'vegetariano',    label: 'Vegetariano' },
+            { value: 'senza_lattosio', label: 'Senza Lattosio' },
+            { value: 'vegano',         label: 'Vegano' }
+        ];
+
+        // Build a card; optionally pre-fill from a saved response object
+        function buildMemberCard(member, index, saved) {
+            var slug     = 'member_' + index;
+            var fullName = member.first_name + ' ' + member.last_name;
+            var nameField = '<input type="hidden" name="' + slug + '_name" value="' + fullName + '">';
+
+            var attendance =
+                '<div class="rsvp-section-label">Partecipazione</div>' +
+                '<div class="rsvp-member-attendance">' +
+                  '<label class="rsvp-radio-label"><input type="radio" name="' + slug + '_attendance" value="accetto" required' +
+                    (saved && saved.attendance === 'accetto' ? ' checked' : '') + '> Accetto</label>' +
+                  '<label class="rsvp-radio-label"><input type="radio" name="' + slug + '_attendance" value="non_accetto"' +
+                    (saved && saved.attendance === 'non_accetto' ? ' checked' : '') + '> Non accetto</label>' +
+                '</div>';
+
+            // Menu block — visible if previously accepted
+            var menuVisible = saved && saved.attendance === 'accetto';
+            var menuHtml = '<div class="rsvp-menu-block' + (menuVisible ? ' visible' : '') + '" id="menu-block-' + slug + '"><div class="rsvp-section-label">Menu</div><div class="rsvp-member-menu">';
+            menuOptions.forEach(function(opt) {
+                var checked = saved && saved.menu && saved.menu.indexOf(opt.value) !== -1 ? ' checked' : '';
+                menuHtml += '<label class="rsvp-check-label"><input type="checkbox" name="' + slug + '_menu" value="' + opt.value + '"' + checked + '> ' + opt.label + '</label>';
+            });
+            menuHtml += '</div><div class="rsvp-menu-error">Seleziona almeno un\'opzione di menu.</div></div>';
+
+            var savedNote = (saved && saved.note) ? saved.note : '';
+            var notes = '<textarea name="' + slug + '_note" placeholder="Note (allergie, esigenze particolari…)" rows="2" style="margin-top:8px;">' + savedNote + '</textarea>';
+
+            return '<div class="rsvp-member-card"><div class="rsvp-member-name">' + fullName + '</div>' + nameField + attendance + menuHtml + notes + '</div>';
+        }
+
+        function attachCardListeners(group) {
+            group.members.forEach(function(member, i) {
+                var slug      = 'member_' + (i + 1);
+                var menuBlock = document.getElementById('menu-block-' + slug);
+                var radios    = document.querySelectorAll('input[name="' + slug + '_attendance"]');
+                radios.forEach(function(radio) {
+                    radio.addEventListener('change', function() {
+                        if (this.value === 'accetto') {
+                            menuBlock.classList.add('visible');
+                        } else {
+                            menuBlock.classList.remove('visible');
+                            menuBlock.querySelectorAll('input[type="checkbox"]').forEach(function(cb) { cb.checked = false; });
+                            menuBlock.closest('.rsvp-member-card').classList.remove('menu-invalid');
+                        }
+                    });
+                });
+                menuBlock.querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
+                    cb.addEventListener('change', function() {
+                        menuBlock.closest('.rsvp-member-card').classList.remove('menu-invalid');
+                    });
+                });
+            });
+        }
+
+        // Fetch saved responses from the sheet, then render the form
+        function showGroup(group) {
+            currentGroup = group;
+            document.getElementById('rsvp-lookup').style.display  = 'none';
+            document.getElementById('lookup-error').style.display  = 'none';
+            document.getElementById('rsvp-results').style.display  = 'none';
+
+            var names = group.members.map(function(m) { return m.first_name; }).join(' e ');
+            var container = document.getElementById('rsvp-members-container');
+
+            // Show a loading state while we fetch saved data
+            document.getElementById('rsvp-found-msg').textContent = 'Caricamento…';
+            document.getElementById('rsvp-form-area').style.display = 'block';
+            container.innerHTML = '';
+
+            fetch(SCRIPT_URL + '?action=get&group_id=' + encodeURIComponent(group.group_id))
+                .then(function(r) { return r.json(); })
+                .then(function(result) {
+                    var savedMap = {};
+                    if (result.ok && result.responses) {
+                        result.responses.forEach(function(r) {
+                            savedMap[normalize(r.member_name)] = r;
+                        });
+                    }
+                    renderForm(group, names, container, savedMap);
+                })
+                .catch(function() {
+                    // If the sheet is unreachable, still render the form without pre-fill
+                    renderForm(group, names, container, {});
+                });
+        }
+
+        function renderForm(group, names, container, savedMap) {
+            var hasPrevious = Object.keys(savedMap).length > 0;
+
+            if (hasPrevious) {
+                document.getElementById('rsvp-found-msg').innerHTML =
+                    'Ciao ' + names + '! Hai già risposto — puoi modificare e reinviare.';
+            } else {
+                document.getElementById('rsvp-found-msg').textContent =
+                    'Ciao ' + names + '! Conferma la tua presenza qui sotto.';
+            }
+
+            container.innerHTML = '';
+            group.members.forEach(function(member, i) {
+                var fullName = member.first_name + ' ' + member.last_name;
+                var saved    = savedMap[normalize(fullName)] || null;
+                container.innerHTML += buildMemberCard(member, i + 1, saved);
+            });
+
+            attachCardListeners(group);
+        }
+
+        function showResults(matches) {
+            var el   = document.getElementById('rsvp-results');
+            var html = '<div class="rsvp-results-label">Seleziona il tuo nome</div>';
+            matches.forEach(function(hit) {
+                var label = hit.group.members.map(function(m) {
+                    return m.first_name + ' ' + m.last_name;
+                }).join(' &amp; ');
+                html += '<button type="button" class="rsvp-result-btn" data-gid="' + hit.group.group_id + '">' + label + '</button>';
+            });
+            el.innerHTML = html;
+            el.style.display = 'block';
+            el.querySelectorAll('.rsvp-result-btn').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var gid   = parseInt(this.getAttribute('data-gid'));
+                    var group = guestsData.find(function(g) { return g.group_id === gid; });
+                    if (group) showGroup(group);
+                });
+            });
+        }
+
+        function doSearch() {
+            var first = document.getElementById('lookup-first').value.trim();
+            var last  = document.getElementById('lookup-last').value.trim();
+            var query = (first + ' ' + last).trim();
+            if (!query) return;
+            document.getElementById('lookup-error').style.display  = 'none';
+            document.getElementById('rsvp-results').style.display  = 'none';
+            loadGuests(function(data) {
+                if (!data) {
+                    document.getElementById('lookup-error').style.display = 'block';
+                    document.getElementById('lookup-error').textContent   = 'Errore nel caricamento dei dati. Riprova più tardi.';
+                    return;
+                }
+                var matches = findMatches(data, query);
+                if (matches.length === 0) {
+                    document.getElementById('lookup-error').style.display = 'block';
+                } else if (matches.length === 1) {
+                    showGroup(matches[0].group);
+                } else {
+                    showResults(matches);
+                }
+            });
+        }
+
+        document.getElementById('lookup-btn').addEventListener('click', doSearch);
+        ['lookup-first', 'lookup-last'].forEach(function(id) {
+            document.getElementById(id).addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') doSearch();
+            });
+        });
+
+        document.getElementById('myForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Validate: every visible menu block must have at least one checkbox checked
+            var valid = true;
+            document.querySelectorAll('.rsvp-menu-block.visible').forEach(function(block) {
+                var card       = block.closest('.rsvp-member-card');
+                var anyChecked = block.querySelectorAll('input[type="checkbox"]:checked').length > 0;
+                if (anyChecked) {
+                    card.classList.remove('menu-invalid');
+                } else {
+                    card.classList.add('menu-invalid');
+                    valid = false;
+                }
+            });
+            if (!valid) return;
+
+            // Collect per-member data
+            var members = [];
+            currentGroup.members.forEach(function(member, i) {
+                var slug       = 'member_' + (i + 1);
+                var attendance = document.querySelector('input[name="' + slug + '_attendance"]:checked');
+                var menuChecks = document.querySelectorAll('input[name="' + slug + '_menu"]:checked');
+                var note       = document.querySelector('textarea[name="' + slug + '_note"]');
+                var menu       = [];
+                menuChecks.forEach(function(cb) { menu.push(cb.value); });
+                members.push({
+                    name:       member.first_name + ' ' + member.last_name,
+                    attendance: attendance ? attendance.value : '',
+                    menu:       menu,
+                    note:       note ? note.value : ''
+                });
+            });
+
+            var submitBtn = document.querySelector('.submit-btn');
+            submitBtn.disabled    = true;
+            submitBtn.textContent = 'Invio in corso…';
+
+            // 1. Save to Google Sheet (source of truth) via GET to avoid CORS
+            var savePayload = JSON.stringify({ group_id: currentGroup.group_id, members: members });
+            fetch(SCRIPT_URL + '?action=save&payload=' + encodeURIComponent(savePayload))
+            .then(function(r) { return r.json(); })
+            .then(function(result) {
+                if (!result.ok) throw new Error(result.error || 'Sheet error');
+
+                // 2. Also notify via Formspree (email notification only, best-effort)
+                var formData = new FormData(document.getElementById('myForm'));
+                return fetch('https://formspree.io/f/mzdaqjzg', {
+                    method:  'POST',
+                    body:    formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+            })
+            .then(function() {
+                document.getElementById('rsvp-form-area').style.display  = 'none';
+                document.getElementById('rsvp-thankyou').style.display   = 'block';
+            })
+            .catch(function(err) {
+                submitBtn.disabled    = false;
+                submitBtn.textContent = 'Invia R.S.V.P';
+                console.error(err);
+                alert('Errore durante l\'invio. Riprova o contattaci direttamente.');
+            });
+        });
+    })();
+    </script>
+
+</body>
+</html>

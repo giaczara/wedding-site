@@ -1,0 +1,421 @@
+[
+  {
+    "group_id": 1,
+    "members": [
+      { "first_name": "Andrea", "last_name": "Zara" },
+      { "first_name": "Cristina", "last_name": "Balostro" }
+    ]
+  },
+  {
+    "group_id": 2,
+    "members": [
+      { "first_name": "Ettore", "last_name": "Turani" },
+      { "first_name": "Alessandra", "last_name": "Corsi" }
+    ]
+  },
+  {
+    "group_id": 3,
+    "members": [
+      { "first_name": "Francesco", "last_name": "Zara" }
+    ]
+  },
+  {
+    "group_id": 4,
+    "members": [
+      { "first_name": "Stefano", "last_name": "Zara" },
+      { "first_name": "Anna", "last_name": "Pittaluga" }
+    ]
+  },
+  {
+    "group_id": 5,
+    "members": [
+      { "first_name": "Lina", "last_name": "Viganego" }
+    ]
+  },
+  {
+    "group_id": 6,
+    "members": [
+      { "first_name": "Federico", "last_name": "Zara" },
+      { "first_name": "Roberta", "last_name": "Baletto" }
+    ]
+  },
+  {
+    "group_id": 7,
+    "members": [
+      { "first_name": "Giulia", "last_name": "Zara" },
+      { "first_name": "Edoardo", "last_name": "Parodi" }
+    ]
+  },
+  {
+    "group_id": 8,
+    "members": [
+      { "first_name": "Camilla", "last_name": "Zara" },
+      { "first_name": "Lorenzo", "last_name": "" } 
+    ],
+    "fix": "yes"
+  },
+  {
+    "group_id": 9,
+    "members": [
+      { "first_name": "Stefano", "last_name": "Zara Jr." }
+    ],
+    "fix": "yes"
+  },
+  {
+    "group_id": 10,
+    "members": [
+      { "first_name": "Roberto", "last_name": "Balostro" },
+      { "first_name": "Mariarosa", "last_name": "Immordino" }
+    ]
+  },
+  {
+    "group_id": 11,
+    "members": [
+      { "first_name": "Benedetta", "last_name": "Balostro" },
+      { "first_name": "Lorenzo", "last_name": "Traverso" }
+    ]
+  },
+  {
+    "group_id": 12,
+    "members": [
+      { "first_name": "Gianfranco", "last_name": "Balostro" }
+    ]
+  },
+  {
+    "group_id": 13,
+    "members": [
+      { "first_name": "Samuel", "last_name": "Balostro" },
+      { "first_name": "Asia", "last_name": "Mureddu" }
+    ]
+  },
+  {
+    "group_id": 14,
+    "members": [
+      { "first_name": "Federico", "last_name": "Balostro" },
+      { "first_name": "Chiara", "last_name": "Sacco" }
+    ]
+  },
+  {
+    "group_id": 15,
+    "members": [
+      { "first_name": "Eugenio", "last_name": "Roberti" }
+    ]
+  },
+  {
+    "group_id": 16,
+    "members": [
+      { "first_name": "Francesco", "last_name": "Diletti" }
+    ]
+  },
+  {
+    "group_id": 17,
+    "members": [
+      { "first_name": "Costanza", "last_name": "Bifone" },
+      { "first_name": "Sergio", "last_name": "Palma" }
+    ]
+  },
+  {
+    "group_id": 18,
+    "members": [
+      { "first_name": "Antonio", "last_name": "Corazza" }
+    ]
+  },
+  {
+    "group_id": 19,
+    "members": [
+      { "first_name": "Linda", "last_name": "D'Attili" },
+      { "first_name": "Saria", "last_name": "Corazza" }
+    ],
+    "fix": "yes"
+  },
+  {
+    "group_id": 20,
+    "members": [
+      { "first_name": "Mahed", "last_name": "Mousavi" },
+      { "first_name": "Maryam", "last_name": "Sajedinia" }
+    ]
+  },
+  {
+    "group_id": 21,
+    "members": [
+      { "first_name": "Andrea", "last_name": "Campanella" },
+      { "first_name": "Silvia", "last_name": "Pittiglio" }
+    ]
+   },
+  {
+    "group_id": 22,
+    "members": [
+      { "first_name": "Federico", "last_name": "Piazza" },
+      { "first_name": "Silvia", "last_name": "Gola" }
+    ]
+  },
+  {
+    "group_id": 23,
+    "members": [
+      { "first_name": "Matteo", "last_name": "Campanella" }
+    ],
+    "fix": "yes"
+  },
+  {
+    "group_id": 24,
+    "members": [
+      { "first_name": "Stefano", "last_name": "Benveduti" }
+    ],
+    "fix": "yes"
+   },
+   {
+    "group_id": 25,
+    "members": [
+      { "first_name": "Maria", "last_name": "Benveduti" }
+    ]
+   },
+   {
+    "group_id": 26,
+    "members": [
+      { "first_name": "Barbara", "last_name": "Benveduti" }
+    ]
+   },
+   {
+    "group_id": 27,
+    "members": [
+      { "first_name": "Camilla", "last_name": "Coq" }
+    ]
+   },
+    {
+      "group_id": 28,
+      "members": [
+        { "first_name": "Matteo", "last_name": "Cerruti" }
+      ]
+    },
+    {
+      "group_id": 29,
+      "members": [
+        { "first_name": "Camilla", "last_name": "Hardonk" }
+      ]
+    },
+    {
+      "group_id": 30,
+      "members": [
+        { "first_name": "Giovanni", "last_name": "Corazza" }
+      ]
+    },
+    {
+      "group_id": 31,
+      "members": [
+        { "first_name": "Giovanni", "last_name": "Corazza" }
+      ]
+    },
+    {
+      "group_id": 32,
+      "members": [
+        { "first_name": "Arianna", "last_name": "Turani" },
+        { "first_name": "Fabrizio", "last_name": "Nikzad" },
+        { "first_name": "Francesco", "last_name": "Nikzad" },
+        { "first_name": "Sole", "last_name": "Nikzad" },
+        { "first_name": "Aida", "last_name": "Nikzad" }
+      ]
+    },
+    {
+      "group_id": 33,
+      "members": [
+        { "first_name": "Michela", "last_name": "Turani" },
+        { "first_name": "Fulvio", "last_name": "Guerrisi" },
+        { "first_name": "Mario", "last_name": "Guerrisi" }
+      ]
+    },
+    {
+      "group_id": 34,
+      "members": [
+        { "first_name": "Giovanni", "last_name": "Corazza" }
+      ]
+    },
+    {
+      "group_id": 35,
+      "members": [
+        { "first_name": "Maurizio", "last_name": "Turani" },
+        { "first_name": "Gabriella", "last_name": "Pignotti" }
+      ]
+    },
+    {
+      "group_id": 36,
+      "members": [
+        { "first_name": "Silvia", "last_name": "Turani" }
+      ]
+    },
+    {
+      "group_id": 37,
+      "members": [
+        { "first_name": "Simona", "last_name": "Brugnoli" },
+        { "first_name": "Christian", "last_name": "Saccucci" },
+        { "first_name": "Gaia", "last_name": "Saccucci" },
+        { "first_name": "Sofia", "last_name": "Saccucci" }
+      ]
+    },
+    {
+      "group_id": 38,
+      "members": [
+        { "first_name": "Anna", "last_name": "Minici" },
+        { "first_name": "Giovanni", "last_name": "Volpe" }
+      ]
+    },
+    {
+      "group_id": 39,
+      "members": [
+        { "first_name": "Viviana", "last_name": "Rizzo" },
+        { "first_name": "Leonardo", "last_name": "Gabrielli" }
+      ]
+    },
+    {
+      "group_id": 40,
+      "members": [
+        { "first_name": "Francesca", "last_name": "Rizzo" },
+        { "first_name": "Jeferson", "last_name": "Campagnano" },
+        { "first_name": "Marcello", "last_name": "Rizzo" }
+      ]
+    },
+    {
+      "group_id": 41,
+      "members": [
+        { "first_name": "Justin", "last_name": "Furlong" },
+        { "first_name": "Marianne", "last_name": "Lee" }
+      ]
+    },
+    {
+      "group_id": 42,
+      "members": [
+        { "first_name": "Alessio", "last_name": "D'Ippolito" },
+        { "first_name": "Silvia", "last_name": "Spizzo" }
+      ]
+    },
+    {
+      "group_id": 43,
+      "members": [
+        { "first_name": "Matteo", "last_name": "Grottesi" },
+        { "first_name": "Miriam", "last_name": "Di Stefano" }
+      ]
+    },
+    {
+      "group_id": 44,
+      "members": [
+        { "first_name": "Giulia", "last_name": "Quarta" },
+        { "first_name": "Anthony", "last_name": "Dell'Ospedale" }
+      ]
+    },
+    {
+      "group_id": 45,
+      "members": [
+        { "first_name": "Diego", "last_name": "Proietti" },
+        { "first_name": "Alessia", "last_name": "Massaroni" }
+      ]
+    },
+    {
+      "group_id": 46,
+      "members": [
+        { "first_name": "Michela", "last_name": "Nardini" },
+        { "first_name": "Alessandro", "last_name": "Scaglione" }
+      ]
+    },
+    {
+      "group_id": 47,
+      "members": [
+        { "first_name": "Alessandro", "last_name": "Fulli" }
+      ]
+    },
+    {
+      "group_id": 48,
+      "members": [
+        { "first_name": "Rebecca", "last_name": "Taldo" }
+      ]
+    },
+    {
+      "group_id": 49,
+      "members": [
+        { "first_name": "Ginevra", "last_name": "Marchetti" },
+        { "first_name": "Davide", "last_name": "Di Marco" }
+      ]
+    },
+    {
+      "group_id": 50,
+      "members": [
+        { "first_name": "Valerio", "last_name": "Corsi" },
+        {"first_name": "Rosanna", "last_name": "Corsi" },
+        { "first_name": "Beatrice", "last_name": "Corsi" },
+        { "first_name": "Rachele", "last_name": "Corsi" }
+      ],
+      "fix": "yes"
+    },
+    {
+      "group_id": 51,
+      "members": [
+        { "first_name": "Egidio", "last_name": "Motta" }
+      ]
+    },
+    {
+      "group_id": 52,
+      "members": [
+        { "first_name": "Leonardo", "last_name": "Biagini" },
+        { "first_name": "Sarah", "last_name": "Coviello" }
+      ]
+    },
+    {
+      "group_id": 53,
+      "members": [
+        { "first_name": "Francesco", "last_name": "Vitale" },
+        { "first_name": "Claudia", "last_name": "Spinelli" }
+      ]
+    },
+    {
+      "group_id": 54,
+      "members": [
+        { "first_name": "Giovanni", "last_name": "Corazza" }
+      ]
+    },
+    {
+      "group_id": 55,
+      "members": [
+        { "first_name": "Giovanni", "last_name": "Rizzo" },
+        { "first_name": "Marina", "last_name": "Bevilacqua" }
+      ]
+    },
+    {
+      "group_id": 56,
+      "members": [
+        { "first_name": "Eugenio", "last_name": "Minici" },
+        { "first_name": "Vanda", "last_name": "Rebuffat" }
+      ]
+    },
+    {
+      "group_id": 57,
+      "members": [
+        { "first_name": "Rachele", "last_name": "Primavera" }
+      ]
+    },
+    {
+      "group_id": 58,
+      "members": [
+        { "first_name": "Daniele", "last_name": "Pozzato" },
+        { "first_name": "Arianna", "last_name": "Mazzetto" }
+      ]
+    },
+    {
+      "group_id": 59,
+      "members": [
+        { "first_name": "Federico", "last_name": "Campanella" },
+        { "first_name": "Elisabetta", "last_name": "Piazza" }
+      ]
+    },
+    {
+      "group_id": 60,
+      "members": [
+        { "first_name": "Andrea", "last_name": "Piazza" },
+        { "first_name": "Paola", "last_name": "Cerruti" }
+      ]
+    },
+    {
+      "group_id": 61,
+      "members": [
+        { "first_name": "Andrea", "last_name": "Benveduti" },
+        { "first_name": "Monica", "last_name": "Marini" }
+      ]
+    }
+]
