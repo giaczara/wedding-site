@@ -417,5 +417,12 @@
         { "first_name": "Andrea", "last_name": "Benveduti" },
         { "first_name": "Monica", "last_name": "Marini" }
       ]
+    },
+    {
+      "group_id": 62,
+      "members": [
+        { "first_name": "Sabrina", "last_name": "Brugnoli" },
+        { "first_name": "Luca", "last_name": "Cascioli" }
+      ]
     }
 ]
