@@ -158,7 +158,8 @@
   {
     "group_id": 24,
     "members": [
-      { "first_name": "Stefano", "last_name": "Benveduti" }
+      { "first_name": "Stefano", "last_name": "Benveduti" },
+      { "first_name": "Beatrice", "last_name": "Moreno" }
     ],
     "fix": "yes"
    },
