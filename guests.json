@@ -57,7 +57,8 @@
   {
     "group_id": 9,
     "members": [
-      { "first_name": "Stefano", "last_name": "Zara Jr." }
+      { "first_name": "Stefano", "last_name": "Zara Jr." },
+      { "first_name": "Chiara", "last_name": "Muratore" }
     ],
     "fix": "yes"
   },
